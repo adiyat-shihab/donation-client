@@ -1,29 +1,51 @@
+import { NavLink } from "react-router-dom";
+
 export const NavBar = () => {
   return (
     <>
       <nav className="sticky inset-0 z-10 block h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-[8.75rem] lg:py-4">
         <div className="flex items-center text-gray-900">
           <img src="https://i.ibb.co/KLRmbgb/Logo.png" alt="" />
-          <ul className="ml-auto mr-8 hidden items-center gap-6 lg:flex">
+          <ul className="ml-auto mr-8 hidden items-center gap-[3.06rem] lg:flex">
             <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-              <a className="flex items-center" href="#">
-                Pages
-              </a>
+              <NavLink
+                to="/"
+                style={({ isActive, isPending }) => {
+                  return {
+                    color: isActive ? "red" : "",
+                    borderBottom: isActive ? " 1px solid red" : "",
+                  };
+                }}
+                className={"font-bold text-[1.125rem]"}
+              >
+                Home
+              </NavLink>
             </li>
             <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-              <a className="flex items-center" href="#">
-                Account
-              </a>
-            </li>
+              <NavLink
+                to="/donation"
+                style={({ isActive, isPending }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",
+                    color: isPending ? "red" : "black",
+                  };
+                }}
+              >
+                Donation
+              </NavLink>
+            </li>{" "}
             <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-              <a className="flex items-center" href="#">
-                Blocks
-              </a>
-            </li>
-            <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-              <a className="flex items-center" href="#">
-                Docs
-              </a>
+              <NavLink
+                to="/donation"
+                style={({ isActive, isPending }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",
+                    color: isPending ? "red" : "black",
+                  };
+                }}
+              >
+                Statistics
+              </NavLink>
             </li>
           </ul>
 
