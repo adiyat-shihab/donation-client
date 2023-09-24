@@ -16,7 +16,7 @@ export const NavBar = () => {
                     borderBottom: isActive ? " 1px solid red" : "",
                   };
                 }}
-                className={"font-bold text-[1.125rem]"}
+                className={" text-[1.125rem]"}
               >
                 Home
               </NavLink>
@@ -26,23 +26,25 @@ export const NavBar = () => {
                 to="/donation"
                 style={({ isActive, isPending }) => {
                   return {
-                    fontWeight: isActive ? "bold" : "",
-                    color: isPending ? "red" : "black",
+                    color: isActive ? "red" : "",
+                    borderBottom: isActive ? " 1px solid red" : "",
                   };
                 }}
+                className={" text-[1.125rem]"}
               >
                 Donation
               </NavLink>
             </li>{" "}
             <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
               <NavLink
-                to="/donation"
+                to="/statistics"
                 style={({ isActive, isPending }) => {
                   return {
                     fontWeight: isActive ? "bold" : "",
                     color: isPending ? "red" : "black",
                   };
                 }}
+                className={"font-normal text-[1.125rem]"}
               >
                 Statistics
               </NavLink>

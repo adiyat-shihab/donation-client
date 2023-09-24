@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 export const Donation = ({ data }) => {
   const {
+    id,
     picture,
     category,
     text_button_bg_color,
@@ -8,9 +11,27 @@ export const Donation = ({ data }) => {
     category_bg_color,
   } = data;
   console.log(data);
+  const [localData, setLocalData] = useState([]);
+  const handleData = (data) => {
+    const mainData = [];
+    const mainDataSee = JSON.parse(localStorage.getItem("donation"));
+    if (!mainDataSee) {
+      mainData.push(data);
+      localStorage.setItem("donation", JSON.stringify(mainData));
+    } else {
+      const exist = mainDataSee.find((data) => data.id === id);
+      if (!exist) {
+        mainData.push(...mainDataSee, data);
+        localStorage.setItem("donation", JSON.stringify(mainData));
+      }
+    }
+  };
   return (
     <>
-      <div className="relative flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700  ">
+      <div
+        className="relative flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 cursor-pointer"
+        onClick={() => handleData(data)}
+      >
         <div className="relative m-0 overflow-hidden rounded-t-lg bg-transparent bg-clip-border text-gray-700 shadow-none">
           <img src={picture} alt="ui/ux review check" />
         </div>

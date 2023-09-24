@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainSection } from "./Component/Main Section/MainSection.jsx";
+import { DonationSelect } from "./Component/Donation/DonationSelect.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <MainSection />,
         loader: () => fetch("https://api.npoint.io/0931045fb969c3cee2ba"),
+      },
+      {
+        path: "/donation",
+        element: <DonationSelect />,
       },
     ],
   },
