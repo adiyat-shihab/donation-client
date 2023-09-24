@@ -3,10 +3,18 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MainSection } from "./Component/Main Section/MainSection.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <App />,
+    loader: () => fetch("https://api.npoint.io/0931045fb969c3cee2ba"),
+    children: [
+      {
+        path: "/",
+        element: <MainSection />,
+      },
+    ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

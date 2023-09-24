@@ -1,10 +1,17 @@
-import { useState } from "react";
 import "./App.css";
+import { Outlet, useLoaderData } from "react-router-dom";
+import { NavBar } from "./Component/NavBar/NavBar.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const loader = useLoaderData();
 
-  return <></>;
+  console.log(loader);
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
 }
 
 export default App;
