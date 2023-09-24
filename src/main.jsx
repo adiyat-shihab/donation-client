@@ -8,11 +8,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: () => fetch("https://api.npoint.io/0931045fb969c3cee2ba"),
+
     children: [
       {
         path: "/",
         element: <MainSection />,
+        loader: () => fetch("https://api.npoint.io/0931045fb969c3cee2ba"),
       },
     ],
   },
