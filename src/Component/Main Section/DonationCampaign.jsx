@@ -1,4 +1,5 @@
 import { Donation } from "./Donation.jsx";
+import { useEffect, useState } from "react";
 
 export const DonationCampaign = ({ mainData, searchData }) => {
   const filterData = [];
@@ -9,8 +10,6 @@ export const DonationCampaign = ({ mainData, searchData }) => {
     );
     filterData.push(data);
   }
-  console.log(filterData);
-
   return (
     <>
       <div
@@ -19,7 +18,8 @@ export const DonationCampaign = ({ mainData, searchData }) => {
         }
       >
         {searchData
-          ? filterData[0].map((data) => <Donation data={data} key={data.id} />)
+          ? filterData &&
+            filterData[0].map((data) => <Donation data={data} key={data.id} />)
           : mainData.map((data) => <Donation data={data} key={data.id} />)}
       </div>
     </>

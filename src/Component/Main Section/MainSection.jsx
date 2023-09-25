@@ -6,6 +6,7 @@ import { useState } from "react";
 export const MainSection = () => {
   const loader = useLoaderData();
   const [searchData, setSearchData] = useState("");
+
   const handleInput = (data) => {
     console.log(searchData);
     return setSearchData(data);

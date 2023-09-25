@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainSection } from "./Component/Main Section/MainSection.jsx";
 import { DonationSelect } from "./Component/Donation/DonationSelect.jsx";
+import { DonationPie } from "./Component/DonationChart/DonationPie.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/donation",
         element: <DonationSelect />,
+      },
+      {
+        path: "/statistics",
+        element: <DonationPie />,
       },
     ],
   },

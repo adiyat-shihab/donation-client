@@ -40,11 +40,11 @@ export const NavBar = () => {
                 to="/statistics"
                 style={({ isActive, isPending }) => {
                   return {
-                    fontWeight: isActive ? "bold" : "",
-                    color: isPending ? "red" : "black",
+                    color: isActive ? "red" : "",
+                    borderBottom: isActive ? " 1px solid red" : "",
                   };
                 }}
-                className={"font-normal text-[1.125rem]"}
+                className={" text-[1.125rem]"}
               >
                 Statistics
               </NavLink>
