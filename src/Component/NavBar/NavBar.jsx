@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { MobileNavigation } from "./MobileNavigation.jsx";
 
@@ -8,11 +8,12 @@ export const NavBar = () => {
     <>
       <nav className="sticky inset-0 z-10 block h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 xl:px-[8.75rem] lg:py-4">
         <div className="flex items-center text-gray-900">
-          <img
-            src="https://i.ibb.co/KLRmbgb/Logo.png"
-            alt=""
-            className={"h-[2rem] md:h-[3rem] lg:h-auto"}
-          />
+          <Link to={"/"}>
+            <img
+              src="https://i.ibb.co/KLRmbgb/Logo.png"
+              className={"h-[2rem] md:h-[3rem] lg:h-auto"}
+            />
+          </Link>
           <ul className="ml-auto mr-8 hidden items-center gap-[3.06rem] lg:flex">
             <li className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
               <NavLink
