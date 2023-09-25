@@ -9,7 +9,7 @@ export const ErrorElement = () => {
             <div className="absolute">
               <div className="">
                 <h1 className="my-2 text-gray-800 font-bold text-2xl">
-                  Looks like You enter a non existing page
+                  Looks like You enter an non existing page
                 </h1>
                 <p className="my-2 text-gray-800">Please Go To Home Page</p>
                 <Link to={"/"}>
