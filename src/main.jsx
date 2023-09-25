@@ -6,10 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainSection } from "./Component/Main Section/MainSection.jsx";
 import { DonationSelect } from "./Component/Donation/DonationSelect.jsx";
 import { DonationPie } from "./Component/DonationChart/DonationPie.jsx";
+import { ErrorElement } from "./Component/Error/ErrorElement.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorElement />,
 
     children: [
       {
