@@ -1,11 +1,31 @@
 import { PieChart } from "react-minimal-pie-chart";
+import { createContext, useContext } from "react";
+import { DonationCampaign } from "../Main Section/DonationCampaign.jsx";
+import { useLoaderData } from "react-router-dom";
 
 export const DonationPie = () => {
+  const loader = useLoaderData();
+  const getData = JSON.parse(localStorage.getItem("donation"));
+  const result = (getData.length / loader.length) * 100;
+  const remaining = 100 - result;
+
   const data = [
-    { title: "Total Donation", value: 50, color: "#FF444A", label: "Label 1" },
-    { title: "Your Donation", value: 15, color: "#00C49F", label: "Label 2" },
+    {
+      title: "Total Donation",
+      value: parseFloat(remaining.toFixed(1)),
+      color: "#FF444A",
+      label: `${remaining.toFixed(1)}%`,
+    },
+    {
+      title: "Your Donation",
+      value: parseFloat(result.toFixed(1)),
+      color: "#00C49F",
+      label: `${result.toFixed(1)}%`,
+    },
   ];
 
+  console.log(result.toFixed(1));
+  console.log(remaining);
   return (
     <>
       <div className={"flex justify-center pt-[6.44rem]"}>

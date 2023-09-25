@@ -1,5 +1,6 @@
 import { Donation } from "./Donation.jsx";
-import { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { DonationPie } from "../DonationChart/DonationPie.jsx";
 
 export const DonationCampaign = ({ mainData, searchData }) => {
   const filterData = [];
@@ -10,6 +11,7 @@ export const DonationCampaign = ({ mainData, searchData }) => {
     );
     filterData.push(data);
   }
+
   return (
     <>
       <div

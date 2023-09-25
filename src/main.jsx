@@ -24,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <DonationPie />,
+        loader: () => fetch("https://api.npoint.io/0931045fb969c3cee2ba"),
       },
     ],
   },
