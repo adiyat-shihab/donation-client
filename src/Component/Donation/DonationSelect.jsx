@@ -13,8 +13,8 @@ export const DonationSelect = () => {
     <>
       <div
         className={`mt-[5.19rem] ${
-          getData?.length > 0 && "grid grid-cols-2"
-        } justify-items-center gap-6 px-[8.75rem]`}
+          getData?.length > 0 && "grid grid-cols-1  2xl:grid-cols-2"
+        } justify-items-center gap-6 md:px-4 lg:px-[8.75rem]`}
       >
         {slice
           ? getData && getData.map((data) => <DonationData data={data} />)

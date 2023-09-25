@@ -8,12 +8,10 @@ export const MobileNavigation = () => {
           <Link to={"/"}>
             {" "}
             <li>
-              <div
-                className="block py-2 pl-3 pr-4 text-white bg-blue-700 roundeddark:text-white "
-                aria-current="page"
-              >
+              <div className="block py-2 pl-3 pr-4 text-white text-black roundeddark:text-white ">
                 Home
               </div>
+              <hr />
             </li>
           </Link>
           <Link to={"/donation"}>
@@ -22,6 +20,7 @@ export const MobileNavigation = () => {
                 Donation
               </div>
             </li>
+            <hr />
           </Link>
           <Link to={"/statistics"}>
             {" "}
@@ -29,6 +28,7 @@ export const MobileNavigation = () => {
               <div className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">
                 Statistics
               </div>
+              <hr />
             </li>
           </Link>
         </ul>

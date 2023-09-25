@@ -11,7 +11,7 @@ export const DonationData = ({ data }) => {
   } = data;
   return (
     <>
-      <div className="relative flex  flex-row h-[14.5rem] w-[48.175rem]  bg-white bg-clip-border text-gray-700 rounded-lg ">
+      <div className="relative flex  flex-row md:h-[14.5rem] lg:h-[14.5rem] w-[25rem] h-[10rem] md:w-[46rem] lg:w-[48.175rem]  bg-white bg-clip-border text-gray-700 rounded-lg ">
         <div className="relative m-0 w-2/5 shrink-0 overflow-hidden   bg-white bg-clip-border rounded-l-lg text-gray-700">
           <img
             src={picture}
@@ -33,7 +33,7 @@ export const DonationData = ({ data }) => {
             >
               {category}
             </div>
-            <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+            <h4 className="block font-sans text-[1rem] md:text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
               {title}
             </h4>
             <p
@@ -46,7 +46,7 @@ export const DonationData = ({ data }) => {
               ${price}
             </p>
             <button
-              className="py-[0.5625rem] px-4 rounded-lg mt-[1.25rem]"
+              className="py-[0.5625rem] px-4 rounded-lg mt-[0.25rem] md:mt-[1.25rem]"
               style={{
                 backgroundColor: text_button_bg_color,
                 color: "white",

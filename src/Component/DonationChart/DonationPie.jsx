@@ -28,7 +28,9 @@ export const DonationPie = () => {
       <div className={"flex justify-center pt-[6.44rem] "}>
         <PieChart
           data={data}
-          className={"w-[31.25rem] h-[31.25rem] text-white"}
+          className={
+            "md:w-[31.25rem] md:h-[31.25rem] w-[60%] h-[60%] text-white"
+          }
           label={({ dataEntry }) => dataEntry.label}
           labelPosition={65}
           labelStyle={{
@@ -40,7 +42,7 @@ export const DonationPie = () => {
       </div>
       <div
         className={
-          "text-center mt-[4.31rem] flex justify-center items-center gap-14 pb-[11.3rem]"
+          "text-center mt-[4.31rem] flex-col flex md:flex-row justify-center items-center gap-6 md:gap-14  pb-[11.3rem]"
         }
       >
         <div className={"flex items-center gap-4"}>
