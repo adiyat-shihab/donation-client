@@ -23,11 +23,9 @@ export const DonationPie = () => {
     },
   ];
 
-  console.log(result.toFixed(1));
-  console.log(remaining);
   return (
     <>
-      <div className={"flex justify-center pt-[6.44rem]"}>
+      <div className={"flex justify-center pt-[6.44rem] "}>
         <PieChart
           data={data}
           className={"w-[31.25rem] h-[31.25rem] text-white"}
@@ -42,7 +40,7 @@ export const DonationPie = () => {
       </div>
       <div
         className={
-          "text-center mt-[4.31rem] flex justify-center items-center gap-14"
+          "text-center mt-[4.31rem] flex justify-center items-center gap-14 pb-[11.3rem]"
         }
       >
         <div className={"flex items-center gap-4"}>

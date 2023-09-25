@@ -8,7 +8,6 @@ export const MainSection = () => {
   const [searchData, setSearchData] = useState("");
 
   const handleInput = (data) => {
-    console.log(searchData);
     return setSearchData(data);
   };
   return (
