@@ -1,6 +1,6 @@
 import { Input } from "./Input.jsx";
 
-export const Banner = () => {
+export const Banner = ({ handleInput }) => {
   return (
     <>
       <div
@@ -17,7 +17,7 @@ export const Banner = () => {
             I Grow By Helping People In Need
           </h1>
           <div className={"flex justify-center"}>
-            <Input />
+            <Input handleInput={handleInput} />
           </div>
         </div>
       </div>

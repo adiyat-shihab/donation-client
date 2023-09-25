@@ -1,0 +1,134 @@
+[
+  {
+    "id" : 1,
+    "picture": "https://i.ibb.co/McSYtgv/bf69b0786c15caeae95edc74821add1d.jpg",
+    "title": "Donate to Support Health Initiatives",
+    "category": "Health",
+    "category_bg_color": "#0052ff33",
+    "card_bg_color": "#0052ff26",
+    "text_button_bg_color": "#0052FF",
+    "description": "Your generous donation will have a profound impact on advancing healthcare. We aim to improve access to quality medical services, fund critical research, and enhance the well-being of individuals and communities. With your support, we can make a significant difference in the field of healthcare, saving lives and building a healthier future for all. Join us in this vital mission!",
+    "price": "458.00"
+  },
+  {
+    "id" : 2,
+    "picture": "https://i.ibb.co/gP8HwxW/fb4761ab794b7c6a3bbe47db5aada389.jpg",
+    "title": "Clothing Drive for the Homeless",
+    "category": "Clothing",
+    "category_bg_color": "#79c23f33",
+    "card_bg_color": "#79c23f26",
+    "text_button_bg_color": "#79C23F",
+    "description": "Join our Clothing Drive for the Homeless and provide warmth and comfort to those in need during the harsh winter months. Your donation will help us distribute essential clothing items and make a significant difference in the lives of homeless individuals. Together, we can provide hope and relief.",
+    "price": "486.00"
+  },
+  {
+    "id" : 3,
+    "picture": "https://i.ibb.co/CsPc80M/bb78eb35b1d83676bfeb091b0af13288.jpg",
+    "title": "Educational Scholarships Fund",
+    "category": "Education",
+    "category_bg_color": "#ff444a33",
+    "card_bg_color": "#ff444a26",
+    "text_button_bg_color": "#FF444A",
+    "description": "Support our Educational Scholarships Fund to empower bright minds and future leaders. Your generous donation enables underprivileged students to access quality education, pursue their dreams, and achieve their goals. By investing in education, you are creating a brighter future for individuals, families, and communities. Join us in shaping the future!",
+    "price": "317.00"
+  },
+  {
+    "id" : 4,
+    "picture": "https://i.ibb.co/Lk0N6HV/a5a6654d792205c42250767f04885dec.jpg",
+    "title": "Help Fight Hunger in Communities",
+    "category": "Food",
+    "category_bg_color": "#f8714733",
+    "card_bg_color": "#f8714726",
+    "text_button_bg_color": "#F87147",
+    "description": "Take a stand against hunger in our communities! Your generous contribution will ensure that nutritious meals reach individuals and families facing food insecurity. Together, we can create a hunger-free future where no one goes to bed hungry. Join us in this vital mission to make a difference!",
+    "price": "542.00"
+  },
+  {
+    "id" : 5,
+    "picture": "https://i.ibb.co/CsPc80M/bb78eb35b1d83676bfeb091b0af13288.jpg",
+    "title": "Empower Future Leaders through Education",
+    "category": "Education",
+    "category_bg_color": "#ff444a33",
+    "card_bg_color": "#ff444a26",
+    "text_button_bg_color": "#FF444A",
+    "description": "Contribute to our Educational Scholarships Fund to empower bright minds and future leaders. Your generous donation enables underprivileged students to access quality education, pursue their dreams, and achieve their goals. By investing in education, you are creating a brighter future for individuals, families, and communities. Join us in shaping the future!",
+    "price": "255.00"
+  },
+  {
+    "id" : 6,
+    "picture": "https://i.ibb.co/gP8HwxW/fb4761ab794b7c6a3bbe47db5aada389.jpg",
+    "title": "Donate to Fight Hunger",
+    "category": "Food",
+    "category_bg_color": "#f8714733",
+    "card_bg_color": "#f8714726",
+    "text_button_bg_color": "#F87147",
+    "description": "Take a stand against hunger in our communities! Your generous contribution will ensure that nutritious meals reach individuals and families facing food insecurity. Together, we can create a hunger-free future where no one goes to bed hungry. Join us in this vital mission to make a difference!",
+    "price": "573.00"
+  },
+  {
+    "id" : 7,
+    "picture": "https://i.ibb.co/Lk0N6HV/a5a6654d792205c42250767f04885dec.jpg",
+    "title": "Donate to Support Health Initiatives",
+    "category": "Health",
+    "category_bg_color": "#0052ff33",
+    "card_bg_color": "#0052ff26",
+    "text_button_bg_color": "#0052FF",
+    "description": "Your generous donation will have a profound impact on advancing healthcare. We aim to improve access to quality medical services, fund critical research, and enhance the well-being of individuals and communities. With your support, we can make a significant difference in the field of healthcare, saving lives and building a healthier future for all. Join us in this vital mission!",
+    "price": "389.00"
+  },
+  {
+    "id" : 8,
+    "picture": "https://i.ibb.co/gP8HwxW/fb4761ab794b7c6a3bbe47db5aada389.jpg",
+    "title": "Clothing Donation for the Needy",
+    "category": "Clothing",
+    "category_bg_color": "#79c23f33",
+    "card_bg_color": "#79c23f26",
+    "text_button_bg_color": "#79C23F",
+    "description": "Support our Clothing Drive for the Needy and make a positive impact on the lives of individuals in need. Your clothing donation will help keep them warm and provide essential clothing items during challenging times. Your contribution brings comfort and hope to those who need it most.",
+    "price": "507.00"
+  },
+  {
+    "id" : 9,
+    "picture": "https://i.ibb.co/gP8HwxW/fb4761ab794b7c6a3bbe47db5aada389.jpg",
+    "title": "Clothing Drive for Families",
+    "category": "Clothing",
+    "category_bg_color": "#79c23f33",
+    "card_bg_color": "#79c23f26",
+    "text_button_bg_color": "#79C23F",
+    "description": "Donate clothing to help families in need stay warm during the winter months. Your contribution to our Clothing Drive for Families will provide comfort and relief to those facing difficult circumstances. Together, we can make a positive impact on the lives of families in need.",
+    "price": "364.00"
+  },
+  {
+    "id" : 10,
+    "picture": "https://i.ibb.co/CsPc80M/bb78eb35b1d83676bfeb091b0af13288.jpg",
+    "title": "Education for All",
+    "category": "Education",
+    "category_bg_color": "#ff444a33",
+    "card_bg_color": "#ff444a26",
+    "text_button_bg_color": "#FF444A",
+    "description": "Support education programs that ensure access to quality education for all. Your donation will make education more accessible and empower individuals to reach their full potential, creating a brighter future for our communities. Together, we can break down barriers and provide opportunities for everyone.",
+    "price": "439.00"
+  },
+  {
+    "id" : 11,
+    "picture": "https://i.ibb.co/Lk0N6HV/a5a6654d792205c42250767f04885dec.jpg",
+    "title": "Support Local Food Banks",
+    "category": "Food",
+    "category_bg_color": "#f8714733",
+    "card_bg_color": "#f8714726",
+    "text_button_bg_color": "#F87147",
+    "description": "Contribute to local food banks and help provide meals for families facing hunger in your community. Your donation will make a direct and meaningful impact on those in need, ensuring they have access to nutritious food. Let's come together to support our neighbors and build a stronger, more nourished community!",
+    "price": "577.00"
+  },
+  {
+    "id" : 12,
+    "picture": "https://i.ibb.co/McSYtgv/bf69b0786c15caeae95edc74821add1d.jpg",
+    "title": "Support Health Initiatives",
+    "category": "Health",
+    "category_bg_color": "#0052ff33",
+    "card_bg_color": "#0052ff26",
+    "text_button_bg_color": "#0052FF",
+    "description": "Your generous donation will have a profound impact on advancing healthcare. We aim to improve access to quality medical services, fund critical research, and enhance the well-being of individuals and communities. With your support, we can make a significant difference in the field of healthcare, saving lives and building a healthier future for all. Join us in this vital mission!",
+    "price": "298.00"
+  }
+]

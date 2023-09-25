@@ -10,7 +10,7 @@ export const Donation = ({ data }) => {
     card_bg_color,
     category_bg_color,
   } = data;
-  console.log(data);
+
   const [localData, setLocalData] = useState([]);
   const handleData = (data) => {
     const mainData = [];
