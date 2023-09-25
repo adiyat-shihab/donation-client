@@ -1,14 +1,13 @@
 import { PieChart } from "react-minimal-pie-chart";
-import { createContext, useContext } from "react";
-import { DonationCampaign } from "../Main Section/DonationCampaign.jsx";
 import { useLoaderData } from "react-router-dom";
 
 export const DonationPie = () => {
   const loader = useLoaderData();
   const getData = JSON.parse(localStorage.getItem("donation"));
-  const result = (getData.length / loader.length) * 100;
-  const remaining = 100 - result;
+  const getDataNull = getData ? getData.length : 0;
+  const result = (getDataNull / loader.length) * 100;
 
+  const remaining = 100 - result;
   const data = [
     {
       title: "Total Donation",
