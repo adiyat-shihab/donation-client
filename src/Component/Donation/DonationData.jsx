@@ -11,7 +11,7 @@ export const DonationData = ({ data }) => {
   } = data;
   return (
     <>
-      <div className="relative flex  flex-row  bg-white bg-clip-border text-gray-700 rounded-lg h-fit">
+      <div className="relative flex  flex-row h-[14.5rem] w-[48.175rem]  bg-white bg-clip-border text-gray-700 rounded-lg ">
         <div className="relative m-0 w-2/5 shrink-0 overflow-hidden   bg-white bg-clip-border rounded-l-lg text-gray-700">
           <img
             src={picture}

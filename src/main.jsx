@@ -15,7 +15,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <MainSection />,
-        loader: () => fetch("https://api.npoint.io/0931045fb969c3cee2ba"),
+        loader: () => fetch("https://api.npoint.io/50c3ffe59c3b86aedfd4"),
       },
       {
         path: "/donation",

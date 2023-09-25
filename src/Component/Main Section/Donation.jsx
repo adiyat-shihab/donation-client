@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const Donation = ({ data }) => {
   const {
     id,
@@ -10,8 +8,6 @@ export const Donation = ({ data }) => {
     card_bg_color,
     category_bg_color,
   } = data;
-
-  const [localData, setLocalData] = useState([]);
   const handleData = (data) => {
     const mainData = [];
     const mainDataSee = JSON.parse(localStorage.getItem("donation"));
@@ -33,10 +29,10 @@ export const Donation = ({ data }) => {
         onClick={() => handleData(data)}
       >
         <div className="relative m-0 overflow-hidden rounded-t-lg bg-transparent bg-clip-border text-gray-700 shadow-none">
-          <img src={picture} alt="ui/ux review check" />
+          <img src={picture} alt="ui/ux review check" className={"w-[24rem]"} />
         </div>
         <div
-          className={"p-6 rounded-b-lg"}
+          className={"p-6 rounded-b-lg h-[9.125rem]"}
           style={{ backgroundColor: card_bg_color }}
         >
           <div

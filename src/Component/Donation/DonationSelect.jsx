@@ -1,5 +1,6 @@
 import { DonationData } from "./DonationData.jsx";
 import { useState } from "react";
+import { BlankData } from "./BlankData.jsx";
 
 export const DonationSelect = () => {
   const getData = JSON.parse(localStorage.getItem("donation"));
@@ -11,15 +12,15 @@ export const DonationSelect = () => {
   return (
     <>
       <div
-        className={
-          "mt-[5.19rem] grid grid-cols-2 justify-items-center gap-6 px-[8.75rem]"
-        }
+        className={`mt-[5.19rem] ${
+          getData?.length > 0 && "grid grid-cols-2"
+        } justify-items-center gap-6 px-[8.75rem]`}
       >
         {slice
           ? getData && getData.map((data) => <DonationData data={data} />)
           : getData &&
             getData.slice(0, 4).map((data) => <DonationData data={data} />)}
-        {!getData && <h1>No data Found</h1>}
+        {!getData && <BlankData />}
       </div>
       <div className={" text-center mb-[9.63rem] mt-[2.5rem]"}>
         {getData && getData.length > 4
@@ -33,7 +34,7 @@ export const DonationSelect = () => {
                 Show All
               </button>
             )
-          : " "}
+          : ""}
       </div>
     </>
   );
