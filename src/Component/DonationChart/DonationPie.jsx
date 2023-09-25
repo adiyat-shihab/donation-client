@@ -40,6 +40,20 @@ export const DonationPie = () => {
           }}
         />
       </div>
+      <div
+        className={
+          "text-center mt-[4.31rem] flex justify-center items-center gap-14"
+        }
+      >
+        <div className={"flex items-center gap-4"}>
+          <h1>Your Donation</h1>
+          <div className={"w-[6.25rem] h-[0.75rem] bg-[#00C49F] "}></div>
+        </div>
+        <div className={"flex items-center gap-4"}>
+          <h1>Total Donation</h1>
+          <div className={"w-[6.25rem] h-[0.75rem] bg-[#FF444A]"}></div>
+        </div>
+      </div>
     </>
   );
 };
