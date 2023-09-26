@@ -7,6 +7,7 @@ import { MainSection } from "./Component/Main Section/MainSection.jsx";
 import { DonationSelect } from "./Component/Donation/DonationSelect.jsx";
 import { DonationPie } from "./Component/DonationChart/DonationPie.jsx";
 import { ErrorElement } from "./Component/Error/ErrorElement.jsx";
+import { DonationDetails } from "./Component/DonationDetalis/DonationDetails.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         path: "/statistics",
         element: <DonationPie />,
         loader: () => fetch("https://api.npoint.io/0931045fb969c3cee2ba"),
+      },
+      {
+        path: "/donation/details/:serializedData",
+        element: <DonationDetails />,
+        loader: () => fetch("https://api.npoint.io/50c3ffe59c3b86aedfd4"),
       },
     ],
   },

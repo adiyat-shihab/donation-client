@@ -2,6 +2,7 @@ import { Donation } from "./Donation.jsx";
 import { createContext, useContext, useEffect, useState } from "react";
 import { DonationPie } from "../DonationChart/DonationPie.jsx";
 import { ResultError } from "./ResultError.jsx";
+import { Link } from "react-router-dom";
 
 export const DonationCampaign = ({ mainData, searchData }) => {
   const filterData = [];
@@ -12,6 +13,7 @@ export const DonationCampaign = ({ mainData, searchData }) => {
     );
     filterData.push(data);
   }
+
   return (
     <>
       <div
@@ -23,10 +25,27 @@ export const DonationCampaign = ({ mainData, searchData }) => {
           filterData[0].length === 0 ? (
             <ResultError />
           ) : (
-            filterData[0].map((data) => <Donation data={data} key={data.id} />)
+            filterData[0].map((data) => (
+              <Link
+                to={`/donation/details/${encodeURIComponent(
+                  JSON.stringify(data),
+                )}`}
+              >
+                >
+                <Donation data={data} key={data.id} />
+              </Link>
+            ))
           )
         ) : (
-          mainData.map((data) => <Donation data={data} key={data.id} />)
+          mainData.map((data) => (
+            <Link
+              to={`/donation/details/${encodeURIComponent(
+                JSON.stringify(data),
+              )}`}
+            >
+              <Donation data={data} key={data.id} />
+            </Link>
+          ))
         )}
       </div>
     </>

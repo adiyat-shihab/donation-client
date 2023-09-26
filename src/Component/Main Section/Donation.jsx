@@ -8,26 +8,10 @@ export const Donation = ({ data }) => {
     card_bg_color,
     category_bg_color,
   } = data;
-  const handleData = (data) => {
-    const mainData = [];
-    const mainDataSee = JSON.parse(localStorage.getItem("donation"));
-    if (!mainDataSee) {
-      mainData.push(data);
-      localStorage.setItem("donation", JSON.stringify(mainData));
-    } else {
-      const exist = mainDataSee.find((data) => data.id === id);
-      if (!exist) {
-        mainData.push(...mainDataSee, data);
-        localStorage.setItem("donation", JSON.stringify(mainData));
-      }
-    }
-  };
+
   return (
     <>
-      <div
-        className="relative flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 cursor-pointer"
-        onClick={() => handleData(data)}
-      >
+      <div className="relative flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 cursor-pointer">
         <div className="relative m-0 overflow-hidden rounded-t-lg bg-transparent bg-clip-border text-gray-700 shadow-none">
           <img src={picture} alt="ui/ux review check" className={"w-[24rem]"} />
         </div>

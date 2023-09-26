@@ -1,4 +1,6 @@
-export const DonationData = ({ data }) => {
+import { Link } from "react-router-dom";
+
+export const DonationData = ({ data, idx }) => {
   const {
     id,
     picture,
@@ -9,6 +11,7 @@ export const DonationData = ({ data }) => {
     category_bg_color,
     price,
   } = data;
+  console.log(idx);
   return (
     <>
       <div className="relative flex  flex-row md:h-[14.5rem] lg:h-[14.5rem] w-[25rem] h-[10rem] md:w-[46rem] lg:w-[48.175rem]  bg-white bg-clip-border text-gray-700 rounded-lg ">
@@ -45,16 +48,22 @@ export const DonationData = ({ data }) => {
               {" "}
               ${price}
             </p>
-            <button
-              className="py-[0.5625rem] px-4 rounded-lg mt-[0.25rem] md:mt-[1.25rem]"
-              style={{
-                backgroundColor: text_button_bg_color,
-                color: "white",
-              }}
-              type="button"
+            <Link
+              to={`/donation/details/${encodeURIComponent(
+                JSON.stringify(data),
+              )}`}
             >
-              View Details
-            </button>
+              <button
+                className="py-[0.5625rem] px-4 rounded-lg mt-[0.25rem] md:mt-[1.25rem]"
+                style={{
+                  backgroundColor: text_button_bg_color,
+                  color: "white",
+                }}
+                type="button"
+              >
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
