@@ -8,7 +8,7 @@ export const MobileNavigation = () => {
           <Link to={"/"}>
             {" "}
             <li>
-              <div className="block py-2 pl-3 pr-4 text-white text-black roundeddark:text-white ">
+              <div className="block py-2 pl-3 pr-4 text-black roundeddark:text-white ">
                 Home
               </div>
               <hr />
