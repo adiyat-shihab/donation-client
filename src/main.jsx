@@ -8,6 +8,9 @@ import { DonationSelect } from "./Component/Donation/DonationSelect.jsx";
 import { DonationPie } from "./Component/DonationChart/DonationPie.jsx";
 import { ErrorElement } from "./Component/Error/ErrorElement.jsx";
 import { DonationDetails } from "./Component/DonationDetalis/DonationDetails.jsx";
+import { AuthProvider } from "./Page/AuthProvider.jsx";
+import { Register } from "./Page/Register.jsx";
+import { Login } from "./Page/Login.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,9 +39,19 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 );

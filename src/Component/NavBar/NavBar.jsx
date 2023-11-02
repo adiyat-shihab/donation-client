@@ -1,8 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { MobileNavigation } from "./MobileNavigation.jsx";
+import { authContext } from "../../Page/AuthProvider.jsx";
 
 export const NavBar = () => {
+  const auth = useContext(authContext);
+  console.log(auth);
   const [menu, setMenu] = useState(false);
   return (
     <>
@@ -57,6 +60,12 @@ export const NavBar = () => {
                 Statistics
               </NavLink>
             </li>
+            <NavLink
+              className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased"
+              to={"/login"}
+            >
+              Login
+            </NavLink>
           </ul>
 
           <button
