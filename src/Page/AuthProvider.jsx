@@ -1,5 +1,57 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
+import { auth } from "./firebase.config.js";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import Swal from "sweetalert2";
+import axios from "axios";
 export const authContext = createContext(null);
 export const AuthProvider = ({ children }) => {
-  return <authContext.Provider value={{}}>{children}</authContext.Provider>;
+  const [userDetails, setUserDetails] = useState(null);
+  const CreateUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+  const SignIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+  const SignOut = () => {
+    return signOut(auth).then((res) =>
+      Swal.fire("Sign Out Successful", "", "success"),
+    );
+  };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      const user = currentUser?.email || userDetails?.email;
+      const loggedUser = { email: user };
+      setUserDetails(currentUser);
+      console.log(user);
+      if (currentUser) {
+        axios
+          .post("http://localhost:3000/jwt", loggedUser, {
+            withCredentials: true,
+          })
+          .then((res) => console.log(res.data))
+          .catch((err) => console.log(err));
+      } else {
+        axios
+          .post("http://localhost:3000/clear", loggedUser, {
+            withCredentials: true,
+          })
+          .then((r) => console.log(r))
+          .catch((err) => console.log(err));
+      }
+    });
+    return () => {
+      return unsubscribe();
+    };
+  }, []);
+
+  return (
+    <authContext.Provider value={{ CreateUser, SignOut, SignIn, userDetails }}>
+      {children}
+    </authContext.Provider>
+  );
 };

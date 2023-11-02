@@ -4,13 +4,13 @@ import { MobileNavigation } from "./MobileNavigation.jsx";
 import { authContext } from "../../Page/AuthProvider.jsx";
 
 export const NavBar = () => {
-  const auth = useContext(authContext);
-  console.log(auth);
+  const { userDetails, SignOut } = useContext(authContext);
+
   const [menu, setMenu] = useState(false);
   return (
     <>
       <nav className="sticky inset-0 z-10 block h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 xl:px-[8.75rem] lg:py-4">
-        <div className="flex items-center text-gray-900">
+        <div className="flex items-center  text-gray-900">
           <Link to={"/"}>
             <img
               src="https://i.ibb.co/KLRmbgb/Logo.png"
@@ -60,14 +60,22 @@ export const NavBar = () => {
                 Statistics
               </NavLink>
             </li>
-            <NavLink
-              className="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased"
-              to={"/login"}
-            >
-              Login
-            </NavLink>
+            {userDetails ? (
+              <button
+                onClick={SignOut}
+                className="block text-[1.125rem] p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased"
+              >
+                <span className={"text-[1.125rem]"}>Logout</span>
+              </button>
+            ) : (
+              <NavLink
+                className="block text-[1.125rem] p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased"
+                to={"/login"}
+              >
+                <span className={"text-[1.125rem]"}>Login</span>
+              </NavLink>
+            )}
           </ul>
-
           <button
             className="middle none relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
             data-collapse-target="sticky-navar"
